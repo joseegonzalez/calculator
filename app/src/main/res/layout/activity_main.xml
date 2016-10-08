@@ -7,19 +7,42 @@
     android:orientation="vertical"
     android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/entered_number"
+
+    <EditText
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_weight="1"/>
+        android:layout_weight="1.01"
+        android:inputType="numberSigned|numberDecimal"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <EditText
-        android:id="@+id/answer_edittext"
-        android:layout_width="wrap_content"
+        android:id="@+id/new_number"
+        android:inputType="numberSigned|numberDecimal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:layout_weight="1"/>
+        android:textSize="50sp"
+        android:layout_weight="1"
+        android:textAlignment="viewEnd"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:layout_gravity="end"/>
+
+    <TextView
+        android:id="@+id/operation"
+        android:textColor="@color/white"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:layout_gravity="center"
+        android:textStyle="normal|bold" />
+
+    <!--  Top row -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,6 +99,8 @@
 
     </LinearLayout>
 
+
+    <!-- 7 through X -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,7 +115,9 @@
             android:background="@color/numberColor"
             android:layout_weight="1"
             android:paddingTop="20dp"
-            android:paddingBottom="20dp"/>
+            android:paddingBottom="20dp"
+            android:elevation="0dp"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/num8"
@@ -126,10 +153,9 @@
             android:paddingBottom="20dp"/>
 
 
-
-
     </LinearLayout>
 
+    <!-- 4 through - -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -181,6 +207,7 @@
 
     </LinearLayout>
 
+    <!-- 1 through + -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -233,6 +260,7 @@
 
     </LinearLayout>
 
+    <!-- . through = -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
